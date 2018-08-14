@@ -1,3 +1,4 @@
+
 static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
 {
     ((std::string*)userp)->append((char*)contents, size * nmemb);
@@ -56,11 +57,7 @@ std::string MailServer::inbox(){
         curl_easy_strerror(res));
     }
     else 
-    {
-        //printf("bundasbundasbundas\n");
-        //std::cout << readBuffer << std::endl;
-        //printf("bundasbundasbundas\n");
-  }
+    {}
     curl_easy_cleanup(curl);
     return readBuffer;
 }
@@ -102,11 +99,7 @@ std::string MailServer::getemail(int msgnum){
         curl_easy_strerror(res));
     }
     else 
-    {
-        //printf("bundasbundasbundas\n");
-        //std::cout << readBuffer << std::endl;
-        //printf("bundasbundasbundas\n");
-  }
+    {}
     curl_easy_cleanup(curl);
     return readBuffer;
 }
@@ -147,10 +140,6 @@ void MailServer::deletemail(int msgnum){
         curl_easy_strerror(res));
     }
     else 
-    {
-        //printf("bundasbundasbundas\n");
-        //std::cout << readBuffer << std::endl;
-        //printf("bundasbundasbundas\n");
-  }
+    {}
     curl_easy_cleanup(curl);
 }
